@@ -29,6 +29,7 @@
 <!--页面核心样式-->
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <!--页面核心JS-->
+<script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/respond.min.js"></script>
 </head>
 <body>
@@ -209,11 +210,12 @@
 “归档-时光卷轴”是我的秘密，嘿嘿，想要查看，点击入口哦！
 </div>
 <div class="lock transition p_r">
-
+<input type="text" id="code" value="" placeholder="请输入提取码" class="OPPOSans-M"/>
+<div class="error" id="code_error">密码错误!</div>
 </div>
 <div class="submit" id="btn">
-<a class="di_bl te_c my">秘密入口</a>
-<a href="https://lcy20.netlify.app" id="down" class="di_bl te_c down">进入</a>
+<a  class="di_bl te_c my">秘密入口</a>
+<a id="down" class="di_bl te_c down">进入</a>
 </div>
 </div>
 </div>
@@ -273,7 +275,46 @@ $(function(){
 </script>
 <link rel="stylesheet" type="text/css" href="css/font.css"/>
 <script src="js/clipboard.min.js"></script>
-<script src="js/denglu.js"></script>
+
+<script>//复制
+	var clipboard = new Clipboard('.copy');
+	clipboard.on('success', function(e) {
+		console.log(e);
+	});
+	clipboard.on('error', function(e) {
+		console.log(e);
+	});
+	$('#mail').click(function(){
+		$('#copyed').css('opacity',1)
+			setTimeout(function(){
+			$('#copyed').css('opacity',0)
+		},2000)
+	})
+	$('#one_part,#two_part,#three_part,#four_part,#five_part').hover(function(){
+		var that = $(this)
+		var target = that.attr('id').replace('_part','')
+		$('.focus .txt').hide()
+		$('#'+target).show()
+	},function(){
+		$('.focus .txt').hide()
+		$('#default').show()
+	})
+	$('#code').focus(function(){
+		$('#code').attr('placeholder','请输入密码')
+		$('#code_error').hide()
+	})
+	$('#down').click(function(){
+		var that = $(this)
+		var code = $('#code').val();
+		if(code != 'zwcx'){ //提取码
+			$('#code').attr('placeholder','').val('')
+			$('#code_error').show()
+			return false;
+		}
+		that.attr('href','https://lcy20.netlify.app')//提取码成功跳转地址
+		that.attr('target','_blank')
+	})
+</script>
 <!-- 下载 -->
 <script>
 	const btn = document.querySelector("#btn");

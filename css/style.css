@@ -65,7 +65,7 @@ a:hover {color: #e69f0b;}
 .move-bg{position: absolute;background-color: #FFF;color: #000;left: 0;width: 125px;border-radius: 22px;height: 44px;display: none;top: 0;z-index: 1;}
 /*全局样式 end*/
 .warp{padding: 45px 140px;}
-.warp .txt{font-size: 20px;line-height: 1.5;margin-top: -50px;}
+.warp .txt{font-size: 20px;line-height: 1.5;margin-top: 20px;}
 .warp ul{margin-top: 20px;padding-bottom: 50px;}
 .warp li{border-radius: 10px;background: #202020;border: 1px solid #28292a;width: calc(20% - 2%);height: 180px;margin-right: 2%;margin-top: 40px;padding:30px 40px;overflow: hidden;}
 .warp li .icon{width: 54px;height: 54px;border: 1px solid #28292a;}

@@ -1,57 +1,169 @@
 <!DOCTYPE html>
-<!--
-⣿⣿⣿⣿⣿⣿⣧⢸⡿⣟⣿⡇⢸⣯⣟⣮⢧⡈⢿⣞⡿⣦⠘⠏⣹⣿⣽⢿⣿⣿⣿⣿⣯⣿⣿⣿⡇⢸⣿⣿⣾⡆⠹⢀⣠⣾⣟⣷⡈⢿
-⣿⣿⣿⣿⣿⣿⣿⡈⣿⢿⣽⡇⠘⠛⠛⠛⠓⠓⠈⠛⠛⠟⠇⢀⢿⣻⣿⣯⢿⣿⣿⣿⣷⢿⣿⣿⠁⣾⣿⣿⣿⣧⡄⠇⣹⣿⣾⣯⣿⡄
-⣿⣿⣿⣿⣿⣿⣿⡇⢹⣿⡽⡇⢸⣿⣿⣿⣿⣿⣞⣆⠰⣶⣶⡄⢀⢻⡿⣯⣿⡽⣿⣿⣿⢯⣟⡿⢀⣿⣿⣿⣿⣿⣧⠐⣸⣿⣿⣷⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⠘⣯⡿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣧⡈⢿⣳⠘⡄⠻⣿⢾⣽⣟⡿⣿⢯⣿⡇⢸⣿⣿⣿⣿⣿⣿⡀⢾⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⡇⢹⣿⠇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠻⡇⢹⣆⠹⣟⣾⣽⣻⣟⣿⣽⠁⣾⣿⣿⣿⣿⣿⣿⣇⣿⣿⠿⠛⠛⠉
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⡈⣿⡃⢼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡙⠌⣿⣆⠘⣿⣞⡿⣞⡿⡞⢠⣿⣿⣿⣿⣿⡿⠛⠉⠁⢀⣀⣠⣤⣤
-⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠘⠁⠉⠉⠉⠉⠉⠉⠉⠉⠉⠙⠛⠛⢿⣄⢻⣿⣧⠘⢯⣟⡿⣽⠁⣾⣿⣿⣿⣿⣿⡃⢀⢀⠘⠛⠿⢿⣻⣟
-⣿⣿⣿⣟⣿⣿⣿⣿⣶⣶⡆⢀⣿⣾⣿⣾⣷⣿⣶⠿⠚⠉⢀⢀⣤⣿⣷⣿⣿⣷⡈⢿⣻⢃⣼⣿⣿⣿⣿⣻⣿⣿⣿⡶⣦⣤⣄⣀⡀⠉
-⣿⢿⣿⣿⣻⣿⣿⣿⣿⣿⡿⠐⣿⣿⣿⣿⠿⠋⠁⢀⢀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣌⣥⣾⡿⣿⣿⣷⣿⣿⢿⣷⣿⣿⣟⣾⣽⣳⢯⣟
-⣿⣻⣿⣿⡷⣿⣿⣿⣿⣿⡗⣦⠸⡿⠋⠁⢀⢀⣠⣴⢿⣿⣽⣻⢽⣾⣟⣷⣿⣟⣿⣿⣿⣳⠿⣵⣧⣼⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣽
-⣿⢷⣻⣿⣿⣷⣻⣿⣿⣿⡷⠛⣁⢀⣀⣤⣶⣿⣛⡿⣿⣮⣽⡻⣿⣮⣽⣻⢯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⠸⣟⣯⣿⣿⣷⢿⣽⣿⣿⣷⣿⣷⣆⠹⣿⣶⣯⠿⣿⣶⣟⣻⢿⣷⣽⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣇⠹⣟⣾⣻⣿⣿⢾⡽⣿⣿⣿⣿⣿⣆⢹⣶⣿⣻⣷⣯⣟⣿⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣆⠹⣷⡻⣽⣿⣯⢿⣽⣻⣿⣿⣿⣿⣆⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠛⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⡙⠾⣆⠹⣿⣦⠛⣿⢯⣷⢿⡽⣿⣿⣿⣿⣆⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠎⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣷⡌⢦⠙⣿⣿⣌⠻⣽⢯⣿⣽⣻⣿⣿⣿⣧⠩⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⢰⢣⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣽⣆⠹⣧⠘⣿⣿⡷⣌⠙⢷⣯⡷⣟⣿⣿⣿⣷⡀⡹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣈⠃⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⢻⣽⣿⡄⢻⣷⡈⢿⣿⣿⢧⢀⠙⢿⣻⡾⣽⣻⣿⣿⣄⠌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠛
-⡄⢿⣿⣷⢀⠹⣟⣆⠻⣿⣿⣆⢀⣀⠉⠻⣿⡽⣯⣿⣿⣷⣈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⢀⣠
--->
-<html lang="zh-CN">
-<head>
+<!-- saved from url=(0028)https://zwcxydy.netlify.app/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* 移动设备检测样式 */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  #mobile-notice {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #fff;
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+  }
+  
+  /* 添加装饰性圆点背景 */
+  #mobile-notice::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+    background-size: 30px 30px;
+    z-index: 0;
+    animation: float 15s ease-in-out infinite;
+  }
+  
+  .notice-container {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .notice-icon {
+    font-size: 80px;
+    margin-bottom: 30px;
+    animation: float 3s ease-in-out infinite;
+    color: #e91e63;
+    text-shadow: 0 0 20px rgba(233, 30, 99, 0.5);
+  }
+  
+  .notice-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .notice-subtitle {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .computer-icon {
+    font-size: 60px;
+    margin: 20px 0;
+    color: #4caf50;
+    animation: pulse 2s ease-in-out infinite;
+    text-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+  }
+  
+  .footer-text {
+    position: absolute;
+    bottom: 30px;
+    font-size: 14px;
+    color: #888888;
+    animation: fadeIn 1.2s ease-out 0.5s both;
+  }
+  
+  @media (max-width: 768px) {
+    #mobile-notice {
+      display: flex;
+    }
+    
+    .container {
+      display: none !important;
+    }
+    
+    canvas {
+      display: none !important;
+    }
+    
+    .notice-container {
+      padding: 20px;
+    }
+    
+    .notice-icon {
+      font-size: 60px;
+    }
+    
+    .notice-title {
+      font-size: 24px;
+    }
+  }
+</style>
 <title>~颖~酷黑风个人引导页</title>  
 <!--页面核心样式-->
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="style.css">
 <!--页面核心JS-->
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/respond.min.js"></script>
+<script src="jquery.min.js"></script>
+<script type="text/javascript" src="respond.min.js"></script>
 </head>
-<body>
+<body style="">
+<div id="mobile-notice">
+  <div class="notice-container">
+    <div class="notice-icon">📱</div>
+    <h1 class="notice-title">为了更好的体验<br>请使用电脑访问</h1>
+    <p class="notice-subtitle">本页面在电脑端有最佳的显示效果和交互体验，
+    建议您使用电脑浏览器打开以获取完整功能。</p>
+    <div class="computer-icon">💻</div>
+  </div>
+  <div class="footer-text">~颖~酷黑风个人引导页</div>
+</div>
 <div class="container slideTxtBox">
     <div class="header flex flex-pack-justify flex-align-center">
     <div class="user-info flex flex-align-center">
-        <div class="portrait"><img src="images/1.jpg" ></div>
+        <div class="portrait"><img src="1.jpg"></div>
         <div class="name PangMenZhengDao">追吻辰星</div><!--左上角 Logo+站名-->
     </div>
     <div class="link te_c p_r hd">
 		<ul class="flex flex-align-center">
-			<li class="p_r"><a href="javascript:void(0);" class="transition OPPOSans-R di_bl">关于我</a></li>
+			<li class="p_r cur"><a href="javascript:void(0);" class="transition OPPOSans-R di_bl">关于我</a></li>
 			<li class="p_r"><a href="javascript:void(0);" class="transition OPPOSans-R di_bl">朋友们</a></li>
 		</ul>
-		<div class="move-bg"></div><!--右上方 部件-->
+		<div class="move-bg" style="display: block; left: 0px;"></div><!--右上方 部件-->
 	</div>
 	</div>
 
 <!--页面内容-->	
 <div class="bd">
 <!--左侧小部件-MacBook Air-->
-<div class="content p_r">
+<div class="content p_r" style="display: block;">
 	<div class="en_box flex flex-align-center flex-pack-center">
 	<div class="macbook">
   <div class="inner">
@@ -62,7 +174,7 @@
           <div class="shade"></div>
         </div>
       </div>
-      <img src="images/1.jpg" class="logo">
+      <img src="1.jpg" class="logo">
     </div>
     <div class="body">
       <div class="face-one">
@@ -88,9 +200,9 @@
 	</div>
 	
 	<!--小部件-GIF-->
-	<div class="flex flex-align-center flex-pack-center iphone"><img src="images/icon_APP.gif"></div>
-	<div class="flex flex-align-center flex-pack-center web"><img src="images/icon_WEB.gif"></div>
-	<div class="flex flex-align-center flex-pack-center vr"><img src="images/icon_VR.gif"></div>
+	<div class="flex flex-align-center flex-pack-center iphone"><img src="icon_APP.gif"></div>
+	<div class="flex flex-align-center flex-pack-center web"><img src="icon_WEB.gif"></div>
+	<div class="flex flex-align-center flex-pack-center vr"><img src="icon_VR.gif"></div>
 	</div>
 	
 	<!--个人定位-->
@@ -106,7 +218,7 @@
 	
 	<!--小部件-音乐-->
     <div class="wx flex flex-align-center flex-pack-center p_r" id="three_part">
-    <audio src="https://m8.music.126.net/20211103183235/79c21ea30480cb2566d5bd8709ef4fc5/ymusic/3b1d/91a2/887d/e4830ab3e11f0421964838effd3c6bfd.mp3" controls="controls" preload id="music1" hidden>
+    <audio src="https://m8.music.126.net/20211103183235/79c21ea30480cb2566d5bd8709ef4fc5/ymusic/3b1d/91a2/887d/e4830ab3e11f0421964838effd3c6bfd.mp3" controls="controls" preload="" id="music1" hidden="">
     </audio>
     <span class="holder" id="bf" onclick="bf();">Music</span>
     <div class="tips te_c OPPOSans-B transition">
@@ -126,7 +238,7 @@
 	
 	<!--个人头像-->
 	<div class="pic flex flex-align-center flex-pack-center " id="five_part">
-	    <img src="images/logo.jpg" >
+	    <img src="logo.jpg">
 	</div>
 	                          <!--触发器-->
 					<div class="focus p_r OPPOSans-M">
@@ -142,7 +254,7 @@
 							font-size: <span class="c2">0px</span>;<br>
 							line-height: <span class="c2">0px</span>;
 						</div>
-						<div class="txt" id="one">
+						<div class="txt" id="one" style="display: none;">
 							position: <span class="c1">absolute</span>;<br>
 							width: <span class="c2">357px</span>;<br>
 							height: <span class="c2">157px</span>;<br>
@@ -154,7 +266,7 @@
 							font-size: <span class="c2">119px</span>;<br>
 							line-height: <span class="c2">157px</span>
 						</div>
-						<div class="txt" id="two">
+						<div class="txt" id="two" style="display: none;">
 							position: <span class="c1">absolute</span>;<br>
 							width: <span class="c2">194px</span>;<br>
 							height: <span class="c2">63px</span>;<br>
@@ -166,7 +278,7 @@
 							font-size: <span class="c2">48px</span>;<br>
 							line-height: <span class="c2">63px</span>;
 						</div>
-						<div class="txt" id="three">
+						<div class="txt" id="three" style="display: none;">
 							position: <span class="c1">absolute</span>;<br>
 							width: <span class="c2">78px</span>;<br>
 							height: <span class="c2">58px</span>;<br>
@@ -174,7 +286,7 @@
 							top: <span class="c2">315px</span>;<br>
 							Wechat: <span class="c1">Joreking8</span>;
 						</div>
-						<div class="txt" id="four">
+						<div class="txt" id="four" style="display: none;">
 							position: <span class="c1">absolute</span>;<br>
 							width: <span class="c2">375px</span>;<br>
 							height: <span class="c2">75px</span>;<br>
@@ -187,7 +299,7 @@
 							line-height: <span class="c2">149.1%</span>;
 						</div>
 <!--头像触发器-->						
-<div class="txt" id="five">
+<div class="txt" id="five" style="display: none;">
 	<br>
 	喜欢别人家的老婆~
 	<br>
@@ -210,11 +322,11 @@
 “归档-时光卷轴”是我的秘密，嘿嘿，想要查看，点击入口哦！
 </div>
 <div class="lock transition p_r">
-<input type="text" id="code" value="" placeholder="请输入提取码" class="OPPOSans-M"/>
+<input type="text" id="code" value="" placeholder="请输入提取码" class="OPPOSans-M">
 <div class="error" id="code_error">密码错误!</div>
 </div>
 <div class="submit" id="btn">
-<a  class="di_bl te_c my">秘密入口</a>
+<a class="di_bl te_c my">秘密入口</a>
 <a id="down" class="di_bl te_c down">进入</a>
 </div>
 </div>
@@ -230,28 +342,28 @@
 </div>
 
 <!--翻页内容-->		
-<div class="warp" id="content">
+<div class="warp" id="content" style="display: none;">
 <div class="txt OPPOSans-R">兴趣使然做的一些小东西：</div>
 <ul class="flex flex-warp">
     <li class="transition">
         <div class="icon">
-            <a href="http://www.zzvips.com" target="_blank"><img src="https://q1.qlogo.cn/g?b=qq&nk=123456&s=640" ></a>
+            <a href="http://www.zzvips.com/" target="_blank"><img src="g"></a>
         </div>
-            <h3 class="OPPOSans-M ellipsis"><a href="http://www.zzvips.com" target="_blank">服务器之家</a></h3>
+            <h3 class="OPPOSans-M ellipsis"><a href="http://www.zzvips.com/" target="_blank">服务器之家</a></h3>
             <p class="OPPOSans-M ellipsis">服务器之家</p>
     </li>
     <li class="transition">
         <div class="icon">
-            <a href="http://www.zzvips.com" target="_blank"><img src="https://q1.qlogo.cn/g?b=qq&nk=123456&s=640" ></a>
+            <a href="http://www.zzvips.com/" target="_blank"><img src="g"></a>
         </div>
-            <h3 class="OPPOSans-M ellipsis"><a href="http://www.zzvips.com" target="_blank">服务器之家</a></h3>
+            <h3 class="OPPOSans-M ellipsis"><a href="http://www.zzvips.com/" target="_blank">服务器之家</a></h3>
             <p class="OPPOSans-M ellipsis">服务器之家</p>
     </li>
     <li class="transition">
         <div class="icon">
-            <a href="http://www.zzvips.com" target="_blank"><img src="https://q1.qlogo.cn/g?b=qq&nk=123456&s=640" ></a>
+            <a href="http://www.zzvips.com/" target="_blank"><img src="g"></a>
         </div>
-            <h3 class="OPPOSans-M ellipsis"><a href="http://www.zzvips.com" target="_blank">服务器之家</a></h3>
+            <h3 class="OPPOSans-M ellipsis"><a href="http://www.zzvips.com/" target="_blank">服务器之家</a></h3>
             <p class="OPPOSans-M ellipsis">服务器之家</p>
     </li>
     
@@ -259,22 +371,22 @@
 <style>
 
 </style>
-<canvas id="background"></canvas>
+<canvas id="background" width="2560" height="1329"></canvas>
 </div>
 </div>
 </div>
 
-<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="jquery.SuperSlide.2.1.1.js"></script>
 <script>jQuery(".slideTxtBox").slide({});</script>
 <!-- 滑动效果 -->
-<script src="js/jquery.movebg.js"></script>
+<script src="jquery.movebg.js"></script>
 <script>
 $(function(){
 	$(".link").movebg({width:125/*滑块的大小*/,extra:40/*额外反弹的距离*/,speed:300/*滑块移动的速度*/,rebound_speed:400/*滑块反弹的速度*/});
 })
 </script>
-<link rel="stylesheet" type="text/css" href="css/font.css"/>
-<script src="js/clipboard.min.js"></script>
+<link rel="stylesheet" type="text/css" href="font.css">
+<script src="clipboard.min.js"></script>
 
 <script>//复制
 	var clipboard = new Clipboard('.copy');
@@ -489,5 +601,25 @@ try {
 	}
 } catch (e) {}
 </script>
-</body>
-</html>
+
+<script>
+  // JavaScript设备检测
+  (function() {
+    // 检测是否为移动设备
+    function isMobileDevice() {
+      return (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    }
+    
+    // 如果是移动设备，显示提示信息并隐藏原内容
+    if (isMobileDevice()) {
+      document.getElementById('mobile-notice').style.display = 'block';
+      const containers = document.querySelectorAll('.container, canvas');
+      containers.forEach(el => {
+        el.style.display = 'none';
+      });
+    }
+  })();
+</script>
+
+
+</body></html>
